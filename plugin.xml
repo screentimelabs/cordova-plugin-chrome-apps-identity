@@ -27,8 +27,10 @@
   </js-module>
 
   <platform name="android">
-    <framework src="com.google.android.gms:play-services-identity:+" />
-    <framework src="com.google.android.gms:play-services-auth:+" />
+    <preference name="GOOGLE_SERVICE_IDENTITY_VERSION" default="16.0.0"/>
+	<preference name="GOOGLE_SERVICE_AUTH_VERSION" default="16.0.1"/>
+    <framework src="com.google.android.gms:play-services-identity:$GOOGLE_SERVICE_IDENTITY_VERSION" />
+    <framework src="com.google.android.gms:play-services-auth:$GOOGLE_SERVICE_AUTH_VERSION" />
 
     <source-file src="src/android/ChromeIdentity.java" target-dir="src/org/chromium" />
 
